@@ -6,6 +6,8 @@ const hbs = require('hbs')
 
 const app = express()
 
+const port = process.env.PORT || 3000 //if PORT exists it will use it, otherwise use 3000
+
 console.log(path.join(__dirname, '../public')) //.. go up 1 directory, and /name to go down, if no / is provided, it will go up 2 steps
 
 //partials: reuseable templates for parts of a page.
@@ -134,6 +136,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server is up and running')
 })
