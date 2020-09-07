@@ -6,7 +6,6 @@ const hbs = require('hbs')
 
 const app = express()
 
-console.log(__dirname)
 console.log(path.join(__dirname, '../public')) //.. go up 1 directory, and /name to go down, if no / is provided, it will go up 2 steps
 
 //partials: reuseable templates for parts of a page.
